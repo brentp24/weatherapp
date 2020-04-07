@@ -13,8 +13,9 @@
 
 .card {
     background-color: rgb(19, 75, 245);
+    border: none;
     color: white;
-    margin: 1rem;
+    margin: 2px;
     padding: 0px;
 }
 
@@ -48,3 +49,4 @@ h5 {
 .title {
     padding: 3px;
 }
+
