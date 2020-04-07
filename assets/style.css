@@ -1,0 +1,50 @@
+.border-class {
+    border: 1px;
+    border-style: solid;
+    border-color:#a7a8aa;
+    margin: 10px
+}
+
+.title {
+    text-align: center;
+    background-color: #354253;
+    color: white;
+}
+
+.card {
+    background-color: rgb(19, 75, 245);
+    color: white;
+    margin: 1rem;
+    padding: 0px;
+}
+
+.card-title {
+    font-size: medium;
+    padding: 0px;
+}
+.listed-cities {
+    background-color: rgb(223, 233, 236);
+}
+
+.btn {
+  display: block;
+  text-align: left;
+  background-color: white;
+  margin: 1px
+}
+h5 {
+    margin: 2px 0;
+}
+
+.search-icon {
+    background-color: rgb(19, 75, 245);
+    color: white;
+    border: none
+}
+
+.search-box {
+    border: none
+}
+.title {
+    padding: 3px;
+}

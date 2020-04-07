@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+
+</head>
+
+<body>
+    <!-- jquery-->
+
+    <h1 class="title"> Weather Dashboard</h1>
+
+    <section class="container">
+        <div class="row">
+            <div class="col border-class listed-cities">
+                <!-- Search function -->
+                <div>
+                    <h5>Search for a City:</h5>
+                    <form class="search-box">
+                        <input type="text" placeholder="Search.." name="search">
+                        <button class="search-icon" type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+
+                </div>
+                <br>
+                <!-- listed cities.. this is built of previously searched cities.   -->
+                <div>
+                    <div type="button" class="btn btn-light">Light</div>
+                </div>
+            </div>
+            <!-- Selected City Title and Date -->
+            <div class="col-9 border-class">
+                <h3 class="city">City (<span class="todays-date">Date</span>)<span class="todays-image">image</span>
+                </h3>
+                
+                <div>Temperature: <span class="tempF">temp</span> F</div>
+                <div>Humidity: <span class="humidity">humidity</span>%</div>
+                <div>WindSpead: <span class="wind">wind</span> MPH</div>
+                <div>UV Index: <span class="uv">UV</span></div>
+
+
+                <!-- 5 Day forecast with termp, humidity and symbol -->
+                <div class="forecast">
+                    <h4>5-Day Forecast: </h4>
+                    <div class="container">
+                        <div class="row">
+                            <div class="card" style="width: 8rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <div>image</div>
+                                    <p class="card-text">Temp: </p>
+                                    <p class="card-text">Humidity: </p>
+
+                                </div>
+                            </div>
+                            <div class="card" style="width: 8rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <div>image</div>
+                                    <p class="card-text">Temp: </p>
+                                    <p class="card-text">Humidity </p>
+
+                                </div>
+                            </div>
+                            <div class="card" style="width: 8rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <div>image</div>
+                                    <p class="card-text">Temp: </p>
+                                    <p class="card-text">Humidity </p>
+
+                                </div>
+                            </div>
+                            <div class="card" style="width: 8rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <div>image</div>
+                                    <p class="card-text">Temp: </p>
+                                    <p class="card-text">Humidity </p>
+
+                                </div>
+                            </div>
+                            <div class="card" style="width: 8rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <div>image</div>
+                                    <p class="card-text">Temp: </p>
+                                    <p class="card-text">Humidity </p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Create Cards -->
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- call JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
