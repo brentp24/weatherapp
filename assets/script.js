@@ -1,7 +1,7 @@
 
 
 
-var cityTarget;
+var cityTarget = localStorage.getItem("cityTarget");
 var cityArray = [];
 let todaysDate = moment().format("l");
 var day1 = moment(todaysDate).add(1, 'day').format("l");
@@ -155,5 +155,5 @@ function display5day() {
 
 }
 
-// displayTodaysWeather();
-// display5day(); 
+displayTodaysWeather();
+display5day(); 
