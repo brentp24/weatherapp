@@ -9,6 +9,13 @@ var day2 = moment(todaysDate).add(2, 'day').format("l");
 var day3 = moment(todaysDate).add(3, 'day').format("l");
 var day4 = moment(todaysDate).add(4, 'day').format("l");
 var day5 = moment(todaysDate).add(5, 'day').format("l");
+
+const Clouds = "assets/images/partlycloudy.png"
+const partlyCloudy = "assets/images/partlycloudy.png"
+const Rain = "assets/images/Rain.png"
+const Snow = "assets/images/Snow.png"
+const Clear = "assets/images/Clear.png"
+
 var forecast = [day1, day2, day3, day4, day5];
 $(".todays-date").text(todaysDate);
 // Need to get my own API Key
@@ -83,12 +90,21 @@ function displayTodaysWeather() {
         // store object data
         .then(function (response) {
             // Transfer content to HTML
+            $("#todays-icon").empty();
             $(".city").html(response.name);
             var tempF = (response.main.temp - 273.15) * 1.80 + 32;
             $(".tempF").text(tempF.toFixed(0));
             $(".humidity").text(response.main.humidity);
             $(".wind").text(response.wind.speed);
-            $(".weather").text(response.weather[0].main);
+            //add the icon
+            var todaysWeather = $("<img/>").attr({
+                src: eval(response.weather[0].main),
+                alt: response.weather[0].main,
+                height: "50px",
+                width:  "50px",
+            });
+            $("#todays-icon").append(todaysWeather);
+
         }).catch(function (error) {
             console.log(error);
         });
@@ -123,10 +139,15 @@ function display5day() {
                     class: "card-title",
                     id: forecast[i],
                 });
-                var newWeather = $("<div/>").attr({
+                var newWeather = $("<img/>").attr({
                     class: "weather-day",
                     id: forecast[i],
+                    src: eval(response.list[i].weather[0].main),
+                    alt: response.list[i].weather[0].main,
+                    height: "30px",
+                    width:  "30px",
                 });
+
                 var newTemp = $("<div/>").attr({
                     class: "tempF-day",
                     id: forecast[i],
@@ -146,7 +167,7 @@ function display5day() {
                 newDate.text(forecast[i]);
                 newTemp.text("Temp: " + ((response.list[i].temp.day - 273.15) * 1.80 + 32).toFixed(0) + " °F");
                 newHumidity.text("Humidity: " + response.list[i].humidity + "%");
-                newWeather.text(response.list[i].weather[0].main);
+                //newWeather.text(response.list[i].weather[0].main);
 
             }
         }).catch(function (error) {
