@@ -23,16 +23,16 @@
                 <!-- Search function -->
                 <div>
                     <h5>Search for a City:</h5>
-                    <form class="search-box">
-                        <input type="text" placeholder="Search.." name="search">
-                        <button class="search-icon" type="submit"><i class="fa fa-search"></i></button>
+                    <form id="search-box">
+                        <input type="text" id="search" placeholder="Search.." name="search">
+                        <button class="search-icon" type="submit" id="search-icon"><i class="fa fa-search"></i></button>
                     </form>
 
                 </div>
                 <br>
                 <!-- listed cities.. this is built of previously searched cities.   -->
-                <div>
-                    <div type="button" class="btn btn-light city-array"></div>
+                <div class="city-list">
+                    <!-- <div type="button" class="btn btn-light" id= "city-array">City List</div> -->
                 </div>
             </div>
             <!-- Selected City Title and Date -->
@@ -41,11 +41,11 @@
 
                 <div class="container border-class">
                     <h3>
-                        <span class="city">City</span>
+                        <span class="city" id="city-name">City</span>
                         (<span class="todays-date">Date</span>)
                         <img src="assets/images/partlycloudy.png" alt="Cloudy Sky" height="50px" width=50px>
                     </h3>
-                    <div>Temperature: <span class="tempF"></span> F</div>
+                    <div>Temperature: <span class="tempF"></span>  °F</div>
                     <div>Humidity: <span class="humidity"></span>%</div>
                     <div>WindSpeed: <span class="wind">wind</span> MPH</div>
                     <div>Weather: <span class="weather">weather</span></div>
@@ -57,7 +57,7 @@
                 <div class="container forecast">
                     <h4>5-Day Forecast: </h4>
                     <div class="container">
-                        <div class="row forecast">
+                        <div class="row forecast" id="forecast-row">
                         </div>
                     </div>
                 </div>
