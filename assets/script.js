@@ -12,9 +12,9 @@ var day5 = moment(todaysDate).add(5, 'day').format("l");
 
 const Clouds = "assets/images/partlycloudy.png"
 const partlyCloudy = "assets/images/partlycloudy.png"
-const Rain = "assets/images/Rain.png"
-const Snow = "assets/images/Snow.png"
-const Clear = "assets/images/Clear.png"
+const Rain = "assets/images/rain.png"
+const Snow = "assets/images/snow.png"
+const Clear = "assets/images/clear.png"
 
 var forecast = [day1, day2, day3, day4, day5];
 $(".todays-date").text(todaysDate);
