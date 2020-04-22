@@ -16,6 +16,9 @@ const Rain = "assets/images/rain.png"
 const Snow = "assets/images/snow.png"
 const Clear = "assets/images/clear.png"
 
+
+
+
 var forecast = [day1, day2, day3, day4, day5];
 $(".todays-date").text(todaysDate);
 // Need to get my own API Key
