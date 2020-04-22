@@ -43,9 +43,8 @@ $("#search-icon").on("click", function () {
     }
     //display city info
     displayTodaysWeather();
-    displayUV();
     display5day();
-    
+
 
     //add city to city list
     $(".city-list").empty();
@@ -76,7 +75,6 @@ $("body").on("click", ".btn", function () {
     cityTarget = $(this).html();
     console.log($(this).html());
     displayTodaysWeather();
-    displayUV();
     display5day();
     $("#search").val("");
     event.preventDefault();
@@ -111,29 +109,22 @@ function displayTodaysWeather() {
             });
             $("#todays-icon").append(todaysWeather);
 
+            // UV Index API Call
+
+            // $.ajax({
+            //     url: "http://api.openweathermap.org/data/2.5/uvi?appid=" + apikey + "&lat=" + response.coord.lat + "&lon=" + response.coord.lon,
+            //     method: "GET"
+            // }).then(function (response2) {
+            //     $(".uv").text(response2.value);
+            // })
+
+
         }).catch(function (error) {
             console.log(error);
         });
 }
 
-function displayUV() {
-// find UV 
-    var queryUV = "api.openweathermap.org/data/2.5/uvi?" + cityTarget + "&appid=" + apikey;
 
-//     $.ajax({
-//         url: queryUV,
-//         method: "GET"
-//     })
-//         // store object data
-//         .then(function (response) {
-//             // Transfer content to HTML
-//             console.log(response);
-//             $(".uv").html(response.name);
-
-//         }).catch(function (error) {
-//             console.log(error);
-//         });
- }
 
 
 
@@ -203,5 +194,4 @@ function display5day() {
 }
 
 displayTodaysWeather();
-displayUV();
 display5day(); 
